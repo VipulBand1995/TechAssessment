@@ -1,0 +1,802 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '..//node_modules/primeng/resources/primeng.min.css';
+@import '..//node_modules/primeicons/primeicons.css';
+/* @import '..//node_modules/primeng/resources/themes/nova-light/theme.css'; */
+
+ .semantic {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80px;
+  }
+
+.wordwrapForTable {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80px;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif !important;
+  } 
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.5;
+    background: #ffffff;
+}
+
+fieldset-csa{
+    border: 2px groove;
+    padding-left: 30px;
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.min-h-100 {
+    min-height: 100%;
+}
+
+
+.full-border {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.login-register-bg img {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+.full-border label {
+    padding: 5px 10px;
+    text-transform: capitalize;    /*changed by shivani*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: normal;
+}
+.full-border input {
+    border: none;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 10px 10px;
+    height: auto;
+}
+
+.login-register-bg form {
+        background: #ffffff;
+    margin: 0 auto;
+    max-width: 380px;
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.1);
+}
+
+.login-register-bg h1 {
+    text-transform: capitalize; /*changed by shivani*/
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+.btn {
+    text-transform: capitalize; /*changed by shivani*/
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    border: none !important;
+}
+.btn-default {
+    background: #ED1C24;
+    color: #ffffff;
+    border: none !important;
+}
+
+.btns {
+    text-transform: capitalize; /*changed by shivani*/
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    border: none !important;
+    margin-left: 600px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+
+.btn-sm {
+    padding: 0;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    line-height: 32px;
+}
+
+.btn-default:hover {
+    background: #000000;
+    color: #ffffff;
+}
+.custom-checkbox label, .custom-radio label{
+    text-transform: capitalize; /*changed by shivani*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+}
+.navbar-brand img {
+    max-width: 130px;
+}
+header {
+        position: relative;
+    z-index: 9999999;
+}
+.navbar {
+    padding: 0 30px;
+}
+
+.nav-link {
+    text-transform: capitalize; /*changed by shivani*/
+    font-size: 14px;
+    color: #000000 !important;
+    padding: 14px 20px !important;
+    line-height: normal;
+    min-width: 100px;
+    text-align: center;
+}
+
+.nav-link:hover {
+    background: #ED1C24 !important;
+    color: #ffffff !important;
+}
+
+.nav-link i {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    border-right: 1px solid #eae8e8;
+}
+
+.navbar-nav {
+    margin-left: 20px !important;
+}
+
+.user-profile {
+    margin: 0 15px 0 0;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile img {
+        position: absolute;
+    top: 0;
+    object-fit: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer {
+ margin: 0;
+ padding: 6px 0;
+ text-align: center;
+ background: #ED1C24;
+ color: #ffffff;
+ float: left;
+ width: 100%; 
+position:fixed;
+left:0;
+bottom:0;
+z-index:99999 
+}
+
+footer p {
+    text-transform: capitalize;  /*changed by shivani*/
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar {
+    border-bottom: 1px solid #eae8e8;
+    background: #ffffff;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+
+.hero-header .container-fluid {
+    position: relative;
+    z-index: 9;
+    background: #ED1C24;
+}
+
+.hero-header {
+        margin: -93px 0 0 0;
+    padding: 105px 0 75px 0;
+    float: left;
+    width: 100%;
+    /* background: url(https://www.psychologies.co.uk/sites/default/files/styles/psy2_page_header/public/field/image/Better%20family%20conversations.jpg) center center / cover; */
+    position: relative;
+}
+
+/* Harshal */
+.mandetory-cntrl{
+    border: 1px solid #ff0000 !important;
+    /* border-radius: 10px !important; */
+}
+
+.hero-header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.98;
+    /* background: #f8f9fa; Removd By Amit */
+}
+
+.hero-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize; /*changed by shivani*/
+	display:none;
+}
+
+.hero-breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hero-breadcrumb li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-transform: capitalize;  /*changed by shivani*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+.hero-breadcrumb li:after {
+    content: "/";
+    display: inline-block;
+    margin: 0 5px;
+}
+.hero-breadcrumb li a {
+    color: #ED1C24;
+}
+.hero-breadcrumb li:last-child:after {
+        display: none;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+.content-body {
+    margin-top: -62px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 99;
+	padding-bottom:35px;
+}
+.content-body .white-bg{
+    margin: 0;
+    padding: 10px 30px;
+    background: #ffffff;
+    float: left;
+    width: 100%;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.1);
+}
+
+/* Harshal height */
+.form-control {
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    /* background: #f9f9f9; SOP */
+    min-height: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    box-shadow: none !important;
+    /* harshal */
+    border-radius: 10px;  
+    height: 23px;
+    padding: 1px 12px !important;
+}
+
+/* Vipul added for text box in CCI dialog box */
+.dialog-control {
+    height:25px;
+    width: 100px;
+    overflow: hidden;
+    border-radius:10px;
+    padding-left: 0px;
+    }
+
+.ui-chkbox .ui-chkbox-box{
+    background : gray;
+}
+
+.padding .row {
+    margin: 0 -5px;
+}
+.padding [class*="col"] {
+    padding:3px 5px;
+}
+
+
+/* .table {
+    border: 1px solid #dee2e6;
+} */
+
+.table thead {
+    background: black;
+    color: #ffffff;
+}
+.table thead th {
+   font-weight: 600;
+}
+
+.table th {
+    border: none !important;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+/* 
+font-weight: 700;
+    text-transform: capitalize;  changed by shivani */
+
+.table tbody tr:nth-child(even) {
+    background: #f8f9f9;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+
+.table td{
+    overflow: hidden;
+   /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    /* max-width: 100px; */
+   } 
+
+.action-width {
+    width: 200px;
+}
+
+.nav-tabs {
+    margin: -30px -30px 0 -30px;
+    /* background: black; */
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 10px 10px 0 0 !important;
+    color: #ffffff !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff !important;
+    background-color: red !important;
+    /* border-color: #dee2e6 #dee2e6 #fff; */
+    border-color: none !important;
+}
+
+.nav-tabs .nav-item {
+    margin: 0 !important;
+    background: #000000;
+    color: #ffffff;
+    margin-right: 4px !important;
+    border-radius:10px 10px 0 0 !important;
+}
+.nav-tabs .nav-item:last-child { 
+    margin: 0 !important
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs .nav-item li:last-child{
+    border-right: none !important;
+}
+
+
+/* .tab-content {
+    margin-top: 10px;
+} */
+
+.tab-content {
+    overflow: auto;
+    height: 425px;
+    margin: 0 -30px;
+    padding: 0 30px;
+}
+
+.ui-table-wrapper .table td {
+    overflow: initial !important;
+    white-space: initial !important;
+}
+
+th[ng-reflect-field="stateCode"] {
+    width: 110px;
+}
+
+.card{
+    height: 154px !important; 
+    overflow: hidden !important;
+}
+
+.form-control-label {
+    padding: 2px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: normal;   
+}
+
+.dropdown-menu{
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background: #ED1C24;
+    min-width: 15rem;
+    padding: 0 ;
+}
+li.nav-item.dropdown.show .dropdown-toggle{
+    background: #ED1C24 !important;
+    color: #ffffff !important;
+    
+}
+.dropdown-item {
+    text-transform:capitalize;  /*changed by shivani*/
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+
+.custom-according {
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+}
+
+
+.custom-according h3{
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    font-size: 20px;
+    text-transform: capitalize;   /*changed by shivani*/
+    letter-spacing: 2px;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-according h3:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f107";
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}
+.custom-according.open-according h3:after {
+    content: "\f106";
+}
+.custom-accoring-body {
+    padding: 15px;
+    display: none;
+}
+
+.custom-according.open-according .custom-accoring-body {
+    display: block;
+}
+
+.custom-switch {
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    background: #f9f9f9;
+    min-height: 48px;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: none !important;
+}
+
+input[type="file"] {
+    padding: 9px 15px;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-rel i {
+        position: absolute;
+    top: 11px;
+    right: 10px;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.table td[contenteditable] {
+    background: #e2e2e2;
+}
+
+.border-heading {
+    border-bottom: 1px solid #cccccc;
+    text-transform: capitalize;    /*changed by shivani*/
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:0;
+}
+
+
+.form-group {
+    margin-bottom: 3px;
+}
+
+/*Dashboard Filter*/
+.com-dashb-filter{
+margin-top: -15px;
+}
+.ptable{
+    /* border: 1px solid black; */
+    overflow-x : hidden !important;
+    width: auto !important;
+   
+    
+}
+.ptable .ui-table-resizable>.ui-table-wrapper{
+    /* overflow-x: hidden !important; */
+    /* border-right: 1px solid black; */
+}
+.ptable td {
+    
+    white-space: normal !important;
+    text-overflow: initial !important;
+}
+.table td, .table th {
+	padding:4px 15px;
+}
+.card-body {
+	padding: 0.5rem 1.25rem;
+}
+.card-footer {
+	padding:0.45rem 1.25rem;
+}
+hr {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+.badge {
+	font-size: 96%;
+}
+.mt-5, .my-5 {
+    margin-top: 2rem!important;
+}
+/* rotate caret on hover */
+.dropdown-menu > li > a:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+
+.grey-bg {
+    background: #F4F4F4;
+    padding: 20px;
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+    height: calc(100% - 20px);
+    border-radius: 10px;
+}
+.grey-bg h3 {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.grey-bg ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    width: 100%;
+}
+
+
+.grey-bg ul li {
+    margin-bottom: 10px;
+}
+
+.grey-bg ul li:last-child {
+    margin-bottom: 0;
+}
+
+.scrollit {
+    overflow:scroll;
+    height:200px;
+}
+
+
+
+/* body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item:not(.ui-state-highlight):not(.ui-state-disabled):hover, body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+    color:#ffffff;
+    background: #ED1C24;
+} */
+
+/* CCI dialog CSS start */
+
+.custom-theme-modal th[ng-reflect-field="cciuid"] {
+    width: 250px !important;
+}
+.custom-theme-modal th:last-child[ng-reflect-field="childUID"] {
+    width: 350px !important;
+}
+.custom-theme-modal .ui-paginator-bottom.ui-paginator.ui-widget.ui-widget-header.ui-unselectable-text.ui-helper-clearfix {
+    background: #CCC;
+    padding: 8px 0;
+    /* margin-top: 30px; */
+}
+
+.custom-theme-modal.modal-body {
+    padding: 0 !important;
+}
+
+.custom-theme-modal.last-child td:first-child, .custom-theme-modal.last-child th:first-child { display:none !important}
+.custom-theme-modal th { letter-spacing: 0; 
+}
+.custom-theme-modal th input { width:100% !important; position: relative; top: -3px; margin-top:-10px }
+.custom-theme-modal th, .custom-theme-modal td { padding: 3px 1px 0px 4px !important; }
+.custom-theme-modal th:last-child { width : 100px !important; }
+.custom-theme-modal.modal-body {
+    padding: 0 !important;
+    margin-top: 10px !important;
+}
+.modal-content { border-radius:6px; overflow: hidden;}
+
+/* CCI dialog CSS END*/
+/* Dashboard */
+.color-box { min-height: 140px; background: #000000; color: #ffffff; padding: 20px 10px; justify-content: center; display: flex; align-items: center; text-align: center; }
+  .color-box h4 { font-size: 16px; }
+  .color-box p { margin-bottom: 0; }
+  .count {     padding: 2.5px 10px;
+    display: inline-block;
+    background: #00b050;
+    color: #ffffff;
+    border-radius: 5px; }
+    .width54 { width: 200px }
+    /* Dashboard End */
+
+    /* P-dailog */
+    .ui-dialog-resizable .ui-dialog-content {
+        overflow: auto;
+        background-color: whitesmoke;
+    }
+    .ui-dialog .ui-dialog-titlebar {
+       
+        background-color: whitesmoke;
+    }
+    /* p-dialog End */
+    .dashboardnumbercss{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 30px;
+  font-weight:500;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.dashboardtextcss
+{
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-tooltip-text.ui-shadow.ui-corner-all {
+    background-color: black !important;
+}
+.ui-tooltip .ui-tooltip-text {
+    width: max-content; 
+ }
+ .table-dark {
+     color: black;
+ }
+ .multiselect-dropdown .dropdown-btn{
+     display: contents !important;
+ }
+ .ui-panel .ui-panel-titlebar {
+    background-color: #CCC !important;
+}
+.ui-panel {
+    border:2px groove !important;
+}
+.ui-dialog .ui-dialog-content{
+    background-color: whitesmoke !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.navbar {
+    border-bottom: 1px solid #eae8e8;
+    background: #ED1C24;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: #ffffff;
+}

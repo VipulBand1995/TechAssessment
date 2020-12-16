@@ -1,0 +1,166 @@
+ <!-- <div class="wrapper content-body"> -->
+  <div class="container-fluid">
+    <div class="white-bg">
+      <hr /><hr /><hr />
+        <div class="tab-content" id="myTabContent">
+            &nbsp;
+            <div class="container-fluid">
+              <div class="white-bg">
+                    <form class="padding-form" #CCIDetailsForm="ngForm">
+                        <fieldset>
+                            <legend>Enter Details</legend>
+                                    <div class="form-group">
+                                       <div class="row">
+                                        <div class="col-md-3">
+                                        <label class="form-control-label">Student's Name</label>
+                                        <input type="text" class="form-control mandetory-cntrl" name="studentName" [(ngModel)]="TblStudentDetails.studentName"
+                                          maxlength="100" minlength="2" required />
+                                        </div>
+
+                                          <div class="col-md-3">
+                                            <div class="form-group">
+                                          <!-- <div class="card" style="height: 140px; overflow: hidden;"> -->
+                                            <img #photo [src]="imageName" alt="image" height="200" width="200" />
+                                              <input #photoType type="file"  (change)="imageUpload($event)"
+                                                 accept=".png,.jpg,.jpeg" />
+                                          <!-- </div>   -->
+                                          </div>
+                                          </div>
+                                       </div> 
+                                      
+                                       <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-control-label">Father's Name</label>
+                                            <input type="text" class="form-control mandetory-cntrl" name="fatherName" [(ngModel)] = "TblStudentDetails.fatherName"
+                                              maxlength="100" minlength="2" required />
+                                            </div>  
+                                       </div>
+                                       
+                                       <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-control-label">Birth Date</label>
+                                                <!-- <input matInput [matDatepicker]="picker">
+                                                <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker class="form-control mandetory-cntrl" [(ngModel)]="dateOfBirth" ></mat-datepicker>
+                                               -->
+                                            <input type="date"
+                                             class="form-control mandetory-cntrl"
+                                             name="onBoardingDate"
+                                             [(ngModel)]="TblStudentDetails.dob"
+                                           />
+                                            {{TblStudentDetails.dob}}
+                                        </div>
+                                       </div>  
+                                        
+                                       <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-control-label">Gender</label><br />
+                                           <label class="radio-inline"><input type="radio" [value]="true" name="gender" [(ngModel)]="TblStudentDetails.gender"
+                                               >Male </label>&nbsp;
+                                           <label class="radio-inline"><input type="radio" [value]="false" name="gender" [(ngModel)]="TblStudentDetails.gender"
+                                               >Female </label> <br>
+                                        </div>
+                                       </div>
+                                        
+                                         
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="form-control-label">Course Applied</label>
+                                                <select class="form-control mandetory-cntrl" name="course" [(ngModel)]="TblStudentDetails.course">
+                                                     <option >MCA</option>
+                                                     <option >MBA</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <label class="form-control-label">Address</label>
+                                            <textarea  class="form-control mandetory-cntrl" name="address" [(ngModel)]="TblStudentDetails.address"
+                                                 required ></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                            
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="form-control-label">Mobile Number</label>
+                                                <input type="text" class="form-control mandetory-cntrl" name="contact" [(ngModel)]="TblStudentDetails.contact"
+                                                     required />
+                                            </div>
+                                        </div>    
+                                        
+                                            
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="form-control-label">Email Id</label>
+                                                <input type="text" class="form-control mandetory-cntrl" name="email" [(ngModel)]="TblStudentDetails.email"
+                                                          required />  
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type = "button" name="save" (click)="saveDetails()" >Save</button>&nbsp;&nbsp;&nbsp;
+                                            <button type = "button" name="reset"  (click)="Reset()"  >Reset</button>
+                                            </div>
+                                            
+                                        </div> 
+                                    </div>
+                        </fieldset> 
+                    </form>  
+                    <fieldset>
+                        <legend>Database</legend>
+          <p-table #dt [columns]="StudentHeaderList" [value]="studentDetails"
+           scrollHeight="200px" class="table" sortMode="multiple" [paginator]="true" [rows]="10">
+              <ng-template pTemplate="header" let-columns>
+                  <tr>
+                      <th *ngFor="let col of columns" [pSortableColumn]="col.BindingValue">
+                          {{col.DisplayName}}
+                          <p-sortIcon [field]="col.BindingValue"></p-sortIcon>
+                      </th>
+                      <th class="action-width"></th>
+                  </tr>
+                  <tr>
+                      <th *ngFor="let col of columns" [ngSwitch]="col.BindingValue">
+                          <input pInputText type="text" 
+                          (input)="dt.filter($event.target.value, col.BindingValue, 'contains')">
+                      </th>
+                      <th class="action-width"></th>
+                  </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData let-columns="columns">
+                  <tr [pSelectableRow]="rowData">
+                      <td *ngFor="let col of columns">
+                          {{rowData[col.BindingValue]}}
+                      </td>
+                      <td class="text-right" data-heading="Action">
+                        <button (click)="GetselectedItem(rowData)" >View</button>
+                        <button (click)="DeleteStudent(rowData)" >Delete</button>
+                      </td>
+                  </tr>
+              </ng-template>
+          </p-table>
+          </fieldset>
+          </div>
+                  </div>
+              </div>
+        </div>
+        <ng-template #alertDialog>
+            <h2 matDialogTitle>Alert</h2>
+            <p matDialogContent><em>Fill all the details!!</em></p>
+            <mat-dialog-actions align="end">
+              <button mat-button matDialogClose>Close</button>
+            </mat-dialog-actions>
+          </ng-template>
+          <ng-template #alertDialog1>
+            <h2 matDialogTitle>Alert</h2>
+            <p matDialogContent><em>Data Added</em></p>
+            <mat-dialog-actions align="end">
+              <button mat-button matDialogClose>Close</button>
+            </mat-dialog-actions>
+          </ng-template>
+          <ng-template #deleteDialog>
+            <h2 matDialogTitle>Alert</h2>
+            <p matDialogContent><em>Successfully Deleted!!</em></p>
+            <mat-dialog-actions align="end">
+              <button mat-button matDialogClose>Close</button>
+            </mat-dialog-actions>
+          </ng-template>    
+    </div>
+<!-- </div>       -->
